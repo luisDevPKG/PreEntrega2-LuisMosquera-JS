@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metas SEO -->
+    <meta name="description" content="Formulario de contacto para que el usuario envie sus comentarios y dudas">
+    <meta name="keywords" content="Contacto, Formulario, Opiniones, PlayStation y Xboxn">
+    <!-- Aqui termina las metas para el SEO-->
+    <link rel="shortcut icon" href="../assets/logo-game-over.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Agregando Normalice css para setear -->
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- para mayor performance -->
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Agregando bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Game Over | Press Start... - Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/logo-game-over.png" alt="Logo pagina Game Over">
+        </div>
+        <div class="titulo">
+            <div class="contenido-titulo">
+                <h1>La aventura comienza aqui, que esperas por descubrirla</h1>
+            </div>
+        </div>
+    </header>
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg contenedor">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-principal">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <select class="form-select select__pfm--st" id="plataformas" aria-label="Plataformas">
+                        <option disabled selected>Plataformas</option>
+                        <option value="./playstation.html">PlayStation</option>
+                        <option value="./xbox.html">Xbox</option>
+                    </select>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html#suscripcion">Suscribete</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./quienes_somos.html">Quienes somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contactanos.html">Contactanos</a>
+                  </li>
+                </ul>
+                <!-- <form class="d-flex formulario-search" role="search">
+                  <input class="form-control me-2 buscar" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn-st" type="submit">Buscar</button>
+                </form>
+                <div class="nav-icon">
+                  <a href="" class="nav-icon__img">
+                      <img class="nav-icon__img-sty" src="../assets/icons/cart.png" alt="icon carrito compras">
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </nav>
+    </div>
+    <main>
+        <section class="formulario">
+            <h2>Queremos saber acerca de ti</h2>
+            <h3>Tu opinion es importante para nosotros, te invitamos a que nos informes cualquier duda o inquietud en nuestros procesos.<br>Te responderemos en el menor tiempo posible</h3>
+            <form class="formulario-informacion">
+              <div class="row mb-4">
+                <label class="form-label col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                <div class="col-sm-10 form-input">
+                  <input class="form-control form-control-lg input-data" type="text" placeholder="Ingresa tu Nombre" aria-label="Input nombre">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <label class="form-label col-sm-2 col-form-label col-form-label-sm">Apellido:</label>
+                <div class="col-sm-10 form-input">
+                  <input class="form-control form-control-lg input-data" type="text" placeholder="Ingresa tu Apellido" aria-label="Input apellido">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <label class="form-label col-sm-2 col-form-label col-form-label-sm">Email:</label>
+                <div class="col-sm-10 form-input">
+                  <input class="form-control form-control-lg input-data" type="email" placeholder="Ingresa tu Email" aria-label="Input email">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <label class="form-label col-sm-2 col-form-label col-form-label-sm">Teléfono:</label>
+                <div class="col-sm-10 form-input">
+                  <input class="form-control form-control-lg input-data" type="text" placeholder="Ingresa tu telefono" aria-label="Input telefono">
+                </div>
+              </div>
+              <!-- Seccion radio buttons -->
+              <fieldset class="row row-cols-lg-auto mb-4 align-items-center fieldset-container">
+                <legend class="col-form-label col-sm-8 pt-0">¿Eres nuevo en nuestra plataforma?</legend>
+                <div class="form-check form-check-inline check-w">
+                  <input class="form-check-input check-in-wh" type="radio" name="inlineRadioOptions" value="option1">
+                  <label class="form-check-label check-lb">Si</label>
+                </div>
+                <div class="form-check form-check-inline check-w">
+                  <input class="form-check-input check-in-wh" type="radio" name="inlineRadioOptions" value="option2">
+                  <label class="form-check-label check-lb">No</label>
+                </div>
+              </fieldset>
+              <!-- Text area: Cuentanos tu duda -->
+              <div class="mb-3 textarea-container">
+                <label class="form-label textarea-label">Cuentanos tu duda o queja</label>
+                <textarea class="form-control textarea-content" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="btn-container">
+                <button type="submit" class="btn btn-form">Enviar</button>
+              </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="redes">
+            <h3>Siguenos</h3>
+            <div class="redes-icon">
+                <a href="#"><img src="../assets/icons/instagram.png" alt="logo instagram"></a>
+                <a href="#"><img src="../assets/icons/facebook.png" alt="logo facebook"></a>
+                <a href="#"><img src="../assets/icons/tiktok.png" alt="logo tiktok"></a>
+            </div>
+        </div>
+        <div class="copyrigth">
+            <p class="copyrigth-info">Proyecto practica HTML y CSS - Todos los derechos reservados.  Luis Fernando Mosquera</p>
+        </div>
+    </footer>
+    <!-- Redirige a la Plataforma deseada -->
+    <script src="../javascript/redirigirPlataformas.js"></script>
+    <!-- Complemento Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

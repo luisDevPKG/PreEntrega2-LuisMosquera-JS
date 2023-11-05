@@ -1,0 +1,11 @@
+/* -- Estilos Header -- */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/background-header.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 1rem;
+}

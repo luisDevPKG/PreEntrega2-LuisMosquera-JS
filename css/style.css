@@ -1,0 +1,1320 @@
+@charset "UTF-8";
+/* abstracts */
+/* Defino la paleta de colores de la pagina */
+/* Estilos opciones nav */
+/* Hover opciones nav */
+/* Imagenes background - seccion ofertas */
+/* Imagen del juego - seccion ofertas */
+/* Contenedores juegos slider */
+/* display cards slider vista standar*/
+/* display cards slider vista mobile*/
+/* Cards Planes y precios*/
+/* Mixin footer*/
+/* logo - quienes somos */
+/* titulo mision vision - quienes somos */
+/* estilo texto mision vision - quienes somos */
+/* estilo iconos tel y email - quienes somos */
+/* Iframe ubicacion - quienes somos */
+/* titulo contactanos */
+/* Subtitulo - contactanos */
+/* Estilo Formulario - contactanos */
+/* Radio buttons formulario - contactanos*/
+/* Boton enviar formulario - contactanos*/
+/* Contenedor Card - Plataformas */
+/* Imagenes Card - Plataformas */
+/* Estilo boton comprar - plataformas */
+/* Grilla Pagos */
+/* Contenedor Card Juego - Pago */
+/* Imagen Card - Pago */
+/* Contenedor Card Formulario de Pago */
+/* Radio buttons formulario - Pago*/
+/* Estilo Flex precio juego - Formulario Pago*/
+/* Estilo del precio descuento al juego - Formulario Pago*/
+/* Estilo del porcentaje descuento al juego - Formulario Pago*/
+/* Estilo del precio con descuento al juego - Formulario Pago*/
+/* base */
+html {
+  font-size: 62.5%; /* para hacer uso del rem sin problema -- 1 rem = 10px */
+  /* Establece el tamaño base en 10px lo que facilita la conversión */
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -- Estilos Header -- */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/background-header.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 1rem;
+}
+
+/* Header */
+.logo img {
+  margin-top: 1rem;
+  width: 25rem;
+  margin-left: 3rem;
+}
+
+.titulo {
+  color: #ffffff;
+  margin: 0 3rem;
+}
+.titulo .contenido-titulo h1 {
+  font-size: 4rem;
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+  text-align: justify;
+  line-height: 6rem;
+  margin: 0 2.5rem;
+}
+
+/* Navbar */
+.nav-bar {
+  background-color: #6D6D6D;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-bar .contenedor {
+  margin-bottom: 0.25rem;
+  padding: 0.5rem 0;
+  /* -- Estilos barra busqueda y boton buscar -- */
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item {
+  margin: 0 2rem;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0 2rem;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item a:hover {
+  color: aqua;
+  background-color: #464646;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item .select__pfm--st {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0.2rem 1rem;
+  background-color: #6D6D6D;
+  border: none;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item .select__pfm--st:focus {
+  border-color: #6D6D6D;
+  outline: 0;
+  box-shadow: none;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item .select__pfm--st:hover {
+  color: aqua;
+  background-color: #464646;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search {
+  height: 3.5rem;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .buscar {
+  font-size: 1.5rem;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .btn-st {
+  margin-left: 1rem;
+  width: 15rem;
+  background-color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: solid black;
+  color: #000000;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .btn-st:hover {
+  cursor: pointer;
+  background-color: aqua;
+}
+.nav-bar .contenedor .container-fluid .navbar-collapse .nav-icon .nav-icon__img .nav-icon__img-sty {
+  margin-left: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+/* Ofertas */
+/* -- Seccion OFERTAS -- */
+.ofertas h2 {
+  margin: 4rem 0;
+  font-size: 4rem;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ofertas {
+  position: relative;
+}
+
+.ofertas .promociones {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  margin: 0 auto;
+  background-color: #F4FFFE;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0rem 2.5rem rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 70%;
+  height: 55rem;
+}
+.ofertas .promociones #contenedor-juego-1 {
+  /* Dimensiones de la imagen de background en el Slider */
+  background-image: url(../assets/ofertas/background-1.png);
+  background-size: cover;
+  /* estilo contenedor juego - slider */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  animation: slider 15s ease-in-out infinite;
+}
+.ofertas .promociones #contenedor-juego-2 {
+  /* Dimensiones de la imagen de background en el Slider */
+  background-image: url(../assets/ofertas/background-2.png);
+  background-size: cover;
+  /* estilo contenedor juego - slider */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  animation: slider 15s ease-in-out infinite;
+}
+.ofertas .promociones #contenedor-juego-3 {
+  /* Dimensiones de la imagen de background en el Slider */
+  background-image: url(../assets/ofertas/background-3.png);
+  background-size: cover;
+  /* estilo contenedor juego - slider */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  animation: slider 15s ease-in-out infinite;
+}
+.ofertas .promociones #contenedor-juego-1 .img-juego {
+  /* Dimensiones de las imagenes del juego en el Slider */
+  width: 340rem;
+  height: 40rem;
+  background-image: url(../assets/ofertas/elden-ring-game.webp);
+  background-size: cover;
+  background-position: center;
+  margin: 3rem;
+  border-radius: 2rem;
+}
+.ofertas .promociones #contenedor-juego-2 .img-juego {
+  /* Dimensiones de las imagenes del juego en el Slider */
+  width: 340rem;
+  height: 40rem;
+  background-image: url(../assets/ofertas/horizon-zero-dawn.jpeg);
+  background-size: cover;
+  background-position: center;
+  margin: 3rem;
+  border-radius: 2rem;
+}
+.ofertas .promociones #contenedor-juego-3 .img-juego {
+  /* Dimensiones de las imagenes del juego en el Slider */
+  width: 340rem;
+  height: 40rem;
+  background-image: url(../assets/ofertas/dead-space-game.webp);
+  background-size: cover;
+  background-position: center;
+  margin: 3rem;
+  border-radius: 2rem;
+}
+.ofertas .promociones .informacion {
+  margin: 0 3rem 0 0;
+  text-align: justify;
+}
+.ofertas .promociones .informacion .info-descripcion {
+  /* Informacion de cada juego - slider */
+  font-size: 1.8rem;
+}
+.ofertas .promociones .informacion .info-descripcion b {
+  font-family: "Bree Serif", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+.ofertas .promociones .informacion .star-rating {
+  /* Ofertas - Calificacion */
+  display: inline-block;
+}
+.ofertas .promociones .informacion .star-rating span {
+  font-size: 3rem;
+  color: #000000;
+}
+.ofertas .promociones .boton-slider {
+  position: absolute;
+  left: 46.5%;
+  bottom: 3%;
+}
+.ofertas .promociones .boton-slider .boton {
+  display: inline-block;
+  margin: 0 2rem;
+  background-color: #000000;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 1.2rem;
+}
+.ofertas .promociones .boton-slider .boton:hover {
+  box-shadow: 0rem, 0rem, 0.7rem, rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/* Planes y precios */
+.planes h2 {
+  margin: 7rem 0 3rem 0;
+  font-size: 3rem;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.planes .planes-info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-content: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.planes .planes-info .card {
+  /* Card estilo */
+  border: none;
+  align-items: center;
+  border-radius: 5% 5% 0 0;
+  box-shadow: 0.6rem 0.6rem 0.5rem 0.4rem rgba(0, 0, 0, 0.57);
+  margin-bottom: 5rem;
+}
+.planes .planes-info .un-anio-ps {
+  grid-column: 2/3;
+}
+.planes .planes-info .tres-meses-ps {
+  grid-column: 3/4;
+}
+.planes .planes-info .un-mes-ps {
+  grid-column: 4/5;
+}
+.planes .planes-info .ps-plus-img {
+  width: 100%;
+  height: 80%;
+  padding: unset;
+}
+.planes .planes-info .card .card-info {
+  /* Estilos CARDS en general (PS y XBOX) */
+  text-align: center;
+}
+.planes .planes-info .card .card-info .titulo-promo {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.planes .planes-info .card .card-info .card-descripcion {
+  font-size: 1.4rem;
+  text-align: justify;
+  padding: 0.5rem 0;
+}
+.planes .planes-info .card .card-info .btn-comprar-ps {
+  /* Boton comprar PS */
+  padding: 1rem 3rem;
+  background-color: #2356B6;
+  border: solid #2356B6;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.planes .planes-info .card .card-info .btn-comprar-xbox {
+  /* Boton compar xbox */
+  padding: 1rem 3rem;
+  background-color: #0A9220;
+  border: solid #0A9220;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.planes .planes-info .game-pass-img {
+  /* XBOX GAME PASS */
+  width: 100%;
+  height: 80%;
+  padding: unset;
+}
+.planes .planes-info .un-anio-xbox {
+  grid-column: 2/3;
+}
+.planes .planes-info .tres-meses-xbox {
+  grid-column: 3/4;
+}
+.planes .planes-info .un-mes-xbox {
+  grid-column: 4/5;
+}
+.planes .planes-info .animacion-card {
+  /* Animacion cards - Planes */
+  transition: transform 0.3s ease-in-out;
+}
+.planes .planes-info .animacion-card:hover {
+  transform: translateY(-15px);
+}
+
+/* Footer */
+.redes h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 10%;
+}
+
+.redes .redes-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.redes .redes-icon img {
+  margin: 0.5rem;
+  width: 80px;
+  height: 80px;
+  padding-bottom: 1rem;
+}
+.redes .redes-icon a:hover {
+  color: unset;
+  background-color: unset;
+}
+
+.copyrigth {
+  text-align: center;
+  background-color: #6D6D6D;
+  padding-bottom: 0.5rem;
+}
+.copyrigth .copyrigth-info {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Plataformas */
+.exclusivos {
+  margin: 0 auto;
+  width: 100%;
+}
+.exclusivos .exclusivo__consola--st {
+  padding: 4rem 0;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.exclusivos .container__plataforma {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.exclusivos .container__plataforma .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  margin-left: 5rem;
+  margin-bottom: 4rem;
+}
+.exclusivos .container__plataforma .card-container .card__container--st {
+  width: 90%;
+  border: solid black;
+  border-radius: 1.5rem;
+  background-color: #eaeaea;
+  box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.75);
+  margin-bottom: 6rem;
+  /* Animacion */
+  transition: transform 0.3s ease-in-out;
+}
+.exclusivos .container__plataforma .card-container .card__container--st:hover {
+  transform: translateY(-20px);
+}
+.exclusivos .container__plataforma .card-container .card__container--st .img--card {
+  margin: 0 auto;
+  width: 100%;
+  height: 40rem;
+  padding: 3rem;
+  border-radius: 4rem;
+}
+.exclusivos .container__plataforma .card-container .card__container--st .texto {
+  margin: 0 2rem;
+}
+.exclusivos .container__plataforma .card-container .card__container--st .texto .card__title--st {
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.exclusivos .container__plataforma .card-container .card__container--st .texto .card__text--st {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+.exclusivos .container__plataforma .card-container .card__container--st .btn__comprar {
+  margin: 0 auto;
+}
+.exclusivos .container__plataforma .card-container .card__container--st .btn__comprar .btn__comprar--st {
+  padding: 0.5rem 3rem;
+  background-color: green;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: solid green;
+}
+.exclusivos .container__plataforma .card-container .card__container--st .btn__comprar .btn__comprar--st:hover {
+  background-color: #15E515;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+/* Pago */
+.game-info {
+  margin: 0 auto;
+  width: 90%;
+}
+.game-info .grid-container-pago {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.game-info .grid-container-pago .card-container-pago {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+.game-info .grid-container-pago .card-container-pago .img--juego {
+  width: 50%;
+  padding: 3rem;
+  border-radius: 4rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info {
+  margin: 0 3rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .texto .card__title--st {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .texto .card__text--st {
+  margin-top: 1rem;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .informacion-juego .caracteristicas {
+  /* caracteristicas del juego */
+  padding-bottom: 1rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .informacion-juego .caracteristicas .text__caracteristica--st {
+  margin-left: 1.2rem;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .informacion-juego .plataforma-info {
+  margin-top: 1rem;
+  display: flex;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .informacion-juego .plataforma-info .text__plataforma--st {
+  margin-left: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.3rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .informacion-juego .plataforma-info .text__plataforma--st:hover {
+  background-color: #DBDADA;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .precio {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .precio .precio--descuento {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .precio .precio--descuento .precio__descuento--st {
+  margin-right: 2rem;
+  color: red;
+  font-size: 2rem;
+  text-decoration: line-through;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .precio .precio--descuento .porcentaje__descuento--st {
+  margin-right: 2rem;
+  background-color: red;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .precio .precio--juego {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.game-info .grid-container-pago .card-container-pago .card-info .precio .precio--juego .precio__juego--st {
+  background-color: #73C846;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+.game-info .grid-container-pago .card-container-form-pago {
+  display: flex;
+  flex-direction: column;
+  border: 0.2rem solid gray;
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  background-color: #E9E9E9;
+  padding: 1rem;
+  width: 80%;
+  height: 42rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .texto .card__title--st {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .tipo-cuenta {
+  margin: 2rem 0;
+}
+.game-info .grid-container-pago .card-container-form-pago .tipo-cuenta .form-check .check-in-wh {
+  margin-left: 3rem;
+  margin-right: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .tipo-cuenta .form-check .check-lb {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .metodos-pago {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .metodos-pago .metodo__pago--st {
+  height: 5rem;
+  width: 6rem;
+  margin: 0 1rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .btn-container {
+  margin-top: 2rem;
+}
+.game-info .grid-container-pago .card-container-form-pago .btn-container .btn__pago--sty {
+  display: block;
+  margin: 0 auto;
+  width: 25rem;
+  height: 5rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+.game-info .grid-container-pago .card-container-form-pago .btn-container .btn__pago--sty .btn__img-sty {
+  width: 8%;
+  margin: 0 0.5rem;
+}
+
+/* Quienes somos */
+.container-principal {
+  margin-bottom: 5rem;
+}
+.container-principal .container__titulo {
+  margin: 5rem 0;
+}
+.container-principal .container__titulo .titulo--st {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+.container-principal .layout__cont {
+  display: flex;
+  align-items: center;
+}
+.container-principal .layout__cont .logo {
+  margin: 0 1rem 2rem 2rem;
+}
+.container-principal .layout__cont .logo .logo--st {
+  background-color: #000000;
+  margin: 2rem 0 2rem 3rem;
+  padding: 3rem;
+  border-radius: 20px;
+  height: unset;
+}
+.container-principal .layout__cont .descripcion-empresa .texto--des {
+  text-align: justify;
+  font-size: 1.7rem;
+  padding: 0 4.5rem 0 3rem;
+}
+.container-principal .mision-vision .mision__cont .mv-sty {
+  /* -- Mision, Vision */
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container-principal .mision-vision .mision__cont .mv-sty span {
+  margin-right: 0.5rem;
+}
+.container-principal .mision-vision .mision__cont .texto--mv {
+  text-align: justify;
+  padding: 3rem;
+  font-size: 1.5rem;
+}
+.container-principal .contacto-info {
+  /* Informacion contacto */
+  display: flex;
+  align-items: center;
+}
+.container-principal .contacto-info .content__info .contacto--sty {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.container-principal .contacto-info .content__info .icon-sty {
+  width: 7rem;
+  height: 7rem;
+  margin: 1.5rem 0;
+  padding: unset;
+}
+.container-principal .contacto-info .content__info .texto--cont {
+  font-size: 1.8rem;
+}
+.container-principal .ubicacion-info .ub--ti--stl {
+  /* Ubicacion */
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Contactanos */
+.formulario h2 {
+  margin: 4rem 0;
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: bold;
+}
+.formulario h3 {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: unset;
+}
+.formulario .formulario-informacion {
+  width: 53%;
+  margin: 0 auto;
+  border: solid black;
+  padding: 4rem 4rem 4rem 4rem;
+  margin-bottom: 5rem;
+  box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  background-color: #FAFAFA;
+}
+.formulario .formulario-informacion .row label {
+  font-size: 2rem;
+}
+.formulario .formulario-informacion .row .form-input .input-data {
+  padding: 0.5rem;
+  font-size: 1.7rem;
+}
+.formulario .formulario-informacion .row .form-input .input-data::placeholder {
+  opacity: 40%;
+}
+.formulario .formulario-informacion .fieldset-container {
+  margin-top: 3rem;
+}
+.formulario .formulario-informacion .fieldset-container legend {
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+.formulario .formulario-informacion .fieldset-container .form-check .check-in-wh {
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.formulario .formulario-informacion .textarea-container .textarea-label {
+  /* Text area formulario */
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+}
+.formulario .formulario-informacion .textarea-container .textarea-content {
+  height: 15rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.formulario .formulario-informacion .btn-container {
+  display: flex;
+  justify-content: center;
+}
+.formulario .formulario-informacion .btn-container .btn-form {
+  width: 15%;
+  height: 5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background-color: #6D6D6D;
+  border: solid black;
+  color: #ffffff;
+}
+.formulario .formulario-informacion .btn-container .btn-form:hover {
+  cursor: pointer;
+  background-color: aqua;
+  color: black;
+}
+
+/* Media queries */
+/* --- Vista Escritorio -- pantallas extra grandes -- */
+@media screen and (max-width: 1400px) {
+  .titulo .contenido-titulo h1 {
+    font-size: 3rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item a {
+    font-size: 1.5rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item .select__pfm--st {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search {
+    margin-left: 3rem;
+    height: 2.5rem;
+    width: 20rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .buscar {
+    font-size: 1.5rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .btn-st {
+    height: 2.7rem;
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-icon .nav-icon__img .nav-icon__img-sty {
+    margin-left: 1rem;
+  }
+  /* -- Ofertas -- */
+  .ofertas .promociones {
+    width: 95%;
+  }
+  .ofertas .promociones #contenedor-juego-1 .img-juego {
+    width: 400rem;
+  }
+  .ofertas .promociones #contenedor-juego-2 .img-juego {
+    width: 400rem;
+  }
+  .ofertas .promociones #contenedor-juego-3 .img-juego {
+    width: 400rem;
+  }
+  /* Pago */
+  .game-info {
+    width: 100%;
+  }
+  .game-info .grid-container-pago {
+    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 1rem;
+  }
+  .game-info .grid-container-pago .card-container-pago {
+    flex-direction: column;
+  }
+  .game-info .grid-container-pago .card-container-pago .img--juego {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .game-info .grid-container-pago .card-container-form-pago {
+    width: 90%;
+  }
+  /* -- Planes y precios -- */
+  .planes .planes-info {
+    grid-template-rows: unset;
+    gap: 3rem;
+  }
+  /* Plataformas */
+  .exclusivos .container__plataforma {
+    max-width: 95%;
+  }
+  .exclusivos .container__plataforma .card-container {
+    margin-left: unset;
+  }
+  .exclusivos .container__plataforma .card-container .card__container--st {
+    width: 95%;
+  }
+  /* -- Contactanos -- */
+  .formulario .formulario-informacion {
+    padding: 4rem 4rem 4rem 5rem;
+  }
+  .formulario .formulario-informacion label {
+    margin-right: 0;
+  }
+  .formulario .formulario-informacion .fieldset-container {
+    display: inline-block;
+  }
+  .formulario .formulario-informacion .fieldset-container .form-check .check-in-wh {
+    margin-left: unset;
+  }
+  .formulario .formulario-informacion .btn-container .btn-form {
+    width: 25%;
+  }
+}
+/* --- Vista Tablets grande --- */
+@media screen and (max-width: 990px) {
+  header {
+    flex-direction: row;
+    justify-content: unset;
+  }
+  .logo img {
+    margin-left: 3rem;
+  }
+  .titulo .contenido-titulo h1 {
+    font-size: 2.3rem;
+    line-height: 6rem;
+  }
+  .nav-bar .contenedor {
+    width: 100%;
+  }
+  .nav-bar .contenedor .container-fluid {
+    /* Boton hamburguesa del navbar */
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-toggler {
+    background-color: #CBCBCB;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item a {
+    font-size: 1.8rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-principal .nav-item .select__pfm--st {
+    width: 70%;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: unset;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search {
+    /* Boton hamburguesa seccion formulario buscar */
+    margin: 0 auto;
+    margin-left: 1.1vw;
+    margin-bottom: 1rem;
+    height: 3rem;
+    width: 100%;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .buscar {
+    width: 80%;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .btn-st {
+    height: unset;
+    width: 12rem;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .nav-icon .nav-icon__img .nav-icon__img-sty {
+    padding-bottom: 0.5rem;
+  }
+  /* Ofertas */
+  .ofertas .promociones {
+    height: 51rem;
+  }
+  .ofertas .promociones #contenedor-juego-1 .img-juego {
+    width: 250rem;
+    height: 35rem;
+  }
+  .ofertas .promociones #contenedor-juego-2 .img-juego {
+    width: 250rem;
+    height: 35rem;
+  }
+  .ofertas .promociones #contenedor-juego-3 .img-juego {
+    width: 250rem;
+    height: 35rem;
+  }
+  .ofertas .promociones .informacion .info-descripcion {
+    font-size: 1.8rem;
+  }
+  .ofertas .promociones .informacion .info-descripcion span {
+    display: none;
+  }
+  .ofertas .promociones .informacion .info-descripcion b {
+    font-size: 2.5rem;
+  }
+  .ofertas .promociones .informacion .star-rating span {
+    margin-bottom: 3rem;
+  }
+  .ofertas .promociones .boton-slider {
+    left: 43%;
+    bottom: 1.5%;
+  }
+  /* -- Planes y precios -- */
+  .planes .planes-info {
+    gap: 3rem;
+  }
+  .planes .planes-info .card {
+    margin-bottom: 3rem;
+    width: 22rem;
+  }
+  .planes .planes-info .ps-plus-img {
+    height: 50%;
+  }
+  .planes .planes-info .game-pass-img {
+    height: 50%;
+  }
+  /* Plataformas */
+  .exclusivos {
+    width: 80%;
+  }
+  .exclusivos .container__plataforma .card-container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .exclusivos .container__plataforma .card-container .card__container--st {
+    width: 80%;
+    margin-bottom: 4rem;
+    margin: 0 auto;
+  }
+  /* Pago */
+  .game-info .grid-container-pago {
+    grid-template-columns: 1fr;
+  }
+  .game-info .grid-container-pago .card-container-pago {
+    margin-left: unset;
+    flex-direction: column;
+  }
+  .game-info .grid-container-pago .card-container-form-pago {
+    margin-top: 3rem;
+    width: 50%;
+  }
+  /* Footer */
+  .redes h3 {
+    width: 15%;
+  }
+  .redes .redes-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  /* -- Quienes Somos -- */
+  .container-principal .layout__cont {
+    display: unset;
+  }
+  .container-principal .layout__cont .logo {
+    margin: 0 0 2rem 0;
+  }
+  .container-principal .layout__cont .logo .logo--st {
+    margin: 0 0 2rem 0;
+  }
+  .container-principal .layout__cont .descripcion-empresa .texto--des {
+    padding: 0 3rem 0 3rem;
+    margin-bottom: 4rem;
+  }
+  .container-principal .cont-mbl {
+    /* Informacion contacto */
+    width: 100%;
+  }
+  .container-principal .contacto-info {
+    margin-bottom: 3rem;
+  }
+  .container-principal .contacto-info .content__info .contacto--sty {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .container-principal .contacto-info .content__info .icon-sty {
+    width: 5rem;
+    height: 5rem;
+  }
+  .container-principal .contacto-info .content__info .texto--cont {
+    font-size: 1.8rem;
+  }
+  /* -- Contactanos -- */
+  .formulario h3 {
+    text-align: center;
+    padding: 0 8rem;
+  }
+  .formulario .formulario-informacion {
+    width: 80%;
+  }
+  .formulario .formulario-informacion .fieldset-container .form-check .check-w {
+    width: 25%;
+    margin-top: 2rem;
+    margin-left: 9rem;
+  }
+  .formulario .formulario-informacion .fieldset-container .form-check .check-in-wh {
+    width: 3rem;
+    height: 3rem;
+  }
+  .formulario .formulario-informacion .fieldset-container .form-check .check-lb {
+    padding: 0.5rem;
+  }
+  .formulario .formulario-informacion .textarea-container .textarea-label {
+    /* Text area formulario */
+    margin: 0 0 1rem 0;
+  }
+}
+/* --- Vista Tablets --- */
+@media screen and (max-width: 768px) {
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .buscar {
+    width: 80%;
+  }
+  .ofertas h2 {
+    font-size: 3.3rem;
+  }
+  .ofertas .promociones .boton-slider {
+    left: 40%;
+    bottom: 2.5%;
+  }
+  /* -- Plataformas -- */
+  .exclusivos {
+    width: 100%;
+  }
+  /* -- Contactanos -- */
+  .formulario h3 {
+    text-align: justify;
+  }
+}
+/* --- Vista mobile horizontal-- */
+@media screen and (max-width: 740px) {
+  header {
+    flex-direction: column;
+  }
+  .logo img {
+    margin: 2rem 0;
+  }
+  .titulo .contenido-titulo h1 {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  /* Boton hamburguesa seccion formulario buscar */
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search {
+    justify-content: space-evenly;
+    width: 95%;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .buscar {
+    width: 70%;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .btn-st {
+    margin-left: unset;
+    width: 10rem;
+  }
+  /* Ofertas */
+  .ofertas h2 {
+    font-size: 3.5rem;
+  }
+  .ofertas .promociones {
+    width: 95%;
+    height: 72rem;
+  }
+  .ofertas .promociones .informacion {
+    margin: 0 2rem;
+  }
+  .ofertas .promociones .informacion .info-descripcion {
+    font-size: 2rem;
+  }
+  .ofertas .promociones .informacion .star-rating {
+    margin-bottom: 2rem;
+  }
+  .ofertas .promociones .informacion .star-rating span {
+    font-size: 2rem;
+  }
+  .ofertas .promociones #contenedor-juego-1 {
+    /* estilo contenedor juego - slider */
+    flex-direction: column;
+    background-position: center;
+    justify-content: unset;
+  }
+  .ofertas .promociones #contenedor-juego-2 {
+    /* estilo contenedor juego - slider */
+    flex-direction: column;
+    background-position: center;
+    justify-content: unset;
+  }
+  .ofertas .promociones #contenedor-juego-3 {
+    /* estilo contenedor juego - slider */
+    flex-direction: column;
+    background-position: center;
+    justify-content: unset;
+  }
+  .ofertas .promociones #contenedor-juego-1 .img-juego {
+    /* Dimensiones de las imagenes del juego en el Slider */
+    width: 75%;
+    height: 35rem;
+    margin: 3rem 0;
+  }
+  .ofertas .promociones #contenedor-juego-2 .img-juego {
+    /* Dimensiones de las imagenes del juego en el Slider */
+    width: 75%;
+    height: 35rem;
+    margin: 3rem 0;
+  }
+  .ofertas .promociones #contenedor-juego-3 .img-juego {
+    /* Dimensiones de las imagenes del juego en el Slider */
+    width: 75%;
+    height: 35rem;
+    margin: 3rem 0;
+  }
+  .ofertas .promociones .boton-slider {
+    bottom: 1.5%;
+  }
+  /* Planes y precios */
+  .planes h2 {
+    margin: 5rem 0 3rem 0;
+  }
+  .planes .planes-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
+  .planes .planes-info .card {
+    width: 40rem;
+    height: 36rem;
+  }
+  .planes .planes-info .card .card-info .card-descripcion {
+    padding: 1.5rem 0;
+  }
+  /* Footer */
+  .redes h3 {
+    width: 50%;
+  }
+  .copyrigth {
+    margin-top: 1rem;
+  }
+  /* Pago */
+  .game-info .grid-container-pago .card-container-form-pago {
+    width: 80%;
+  }
+  /* -- Quienes Somos -- */
+  .container-principal .container__titulo .titulo--st {
+    font-size: 3.8rem;
+  }
+  .container-principal .contacto-info {
+    /* Informacion contacto */
+    margin-bottom: 3rem;
+    display: unset;
+  }
+  .container-principal .contacto-info .content__info {
+    margin-bottom: 4rem;
+  }
+  .container-principal .ubicacion-info .ub__map .iframe--stl {
+    /* Iframe */
+    width: 34rem;
+  }
+  /* -- Contactanos -- */
+  .formulario h2 {
+    padding: 0 1rem;
+  }
+  .formulario h3 {
+    padding: 0 3rem;
+  }
+  .formulario .formulario-informacion {
+    width: 90%;
+    padding: 4rem 3rem 4rem 3rem;
+  }
+  .formulario .formulario-informacion .fieldset-container legend {
+    margin-right: unset;
+  }
+  .formulario .formulario-informacion .fieldset-container .check-w {
+    width: 31%;
+    margin-left: 2rem;
+  }
+  .formulario .formulario-informacion .fieldset-container .form-check .check-in-wh {
+    margin-right: unset;
+  }
+  .formulario .formulario-informacion .btn-container .btn-form {
+    width: 40%;
+  }
+}
+/* --- Vista mobile -- */
+@media screen and (max-width: 480px) {
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search {
+    width: 94%;
+  }
+  .nav-bar .contenedor .container-fluid .navbar-collapse .formulario-search .buscar {
+    width: 50%;
+  }
+  /* Ofertas */
+  .ofertas .promociones {
+    height: 84rem;
+  }
+  .ofertas .promociones #contenedor-juego-1 .img-juego {
+    /* Dimensiones de las imagenes del juego en el Slider */
+    width: 32rem;
+  }
+  .ofertas .promociones #contenedor-juego-2 .img-juego {
+    /* Dimensiones de las imagenes del juego en el Slider */
+    width: 32rem;
+  }
+  .ofertas .promociones #contenedor-juego-3 .img-juego {
+    /* Dimensiones de las imagenes del juego en el Slider */
+    width: 32rem;
+  }
+  .ofertas .promociones .boton-slider {
+    left: 33vw;
+  }
+  /* Plataformas */
+  .exclusivos {
+    width: 100%;
+  }
+  .exclusivos .container__plataforma .card-container .card__container--st {
+    width: 95%;
+  }
+  /* Pago */
+  .game-info .grid-container-pago .card-container-pago .img--juego {
+    width: 90%;
+  }
+  .game-info .grid-container-pago .card-container-form-pago {
+    width: 90%;
+  }
+  /* Planes y precios */
+  .planes .planes-info .card {
+    width: 31rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

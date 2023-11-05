@@ -1,0 +1,14 @@
+html {
+    font-size: 62.5%;  /* para hacer uso del rem sin problema -- 1 rem = 10px */
+    /* Establece el tamaño base en 10px lo que facilita la conversión */
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}

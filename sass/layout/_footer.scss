@@ -1,0 +1,30 @@
+.redes h3 {
+    @include footer-titulo;
+    width: 10%;
+}
+.redes .redes-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    & img{
+        margin: .5rem;
+        width: 80px;
+        height: 80px;
+        padding-bottom: 1rem;
+    }
+
+    & a:hover {
+        color: unset;
+        background-color: unset;
+    }
+}
+.copyrigth {
+    text-align: center;
+    background-color: #6D6D6D;
+    padding-bottom: .5rem;
+
+    & .copyrigth-info {
+        @include foot-copyrigth-info;
+    }
+}

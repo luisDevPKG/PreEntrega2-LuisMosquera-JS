@@ -1,0 +1,74 @@
+.container-principal {
+    margin-bottom: 5rem;
+
+    & .container__titulo {
+        margin: 5rem 0;
+
+        & .titulo--st{
+            font-size: 4.2rem;
+            font-weight: bold;
+        }
+    }
+
+    & .layout__cont {
+        display: flex;
+        align-items: center;
+
+        & .logo {
+            margin: 0 1rem 2rem 2rem;
+
+            .logo--st {
+                @include logo-qsomos;
+            }
+        }
+
+        & .descripcion-empresa .texto--des{
+            text-align: justify;
+            font-size: 1.7rem;
+            padding: 0 4.5rem 0 3rem;
+        }
+    }
+
+    & .mision-vision .mision__cont {
+
+        & .mv-sty {
+            /* -- Mision, Vision */
+            @include mv-style;
+
+            & span {
+                margin-right: .5rem;
+            }
+        }
+
+        & .texto--mv {
+            @include mv-txt-style;
+        }
+    }
+
+    & .contacto-info {
+        /* Informacion contacto */
+        display: flex;
+        align-items: center;
+
+        & .content__info {
+
+            & .contacto--sty {
+                font-size: 2rem;
+                font-weight: bold
+            }
+
+            & .icon-sty {
+                @include qsomos-icon-style;
+            }
+
+            & .texto--cont {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    & .ubicacion-info .ub--ti--stl {
+        /* Ubicacion */
+        @include qsomos-iframe-style;
+    }
+}

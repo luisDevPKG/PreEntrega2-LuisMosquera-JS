@@ -1,0 +1,85 @@
+.nav-bar {
+    background-color: #6D6D6D;
+    display: flex;
+    justify-content: space-evenly;
+
+    & .contenedor {
+        margin-bottom: .25rem;
+        padding: .5rem 0;
+
+        /* -- Estilos barra busqueda y boton buscar -- */
+        & .container-fluid {
+
+            & .navbar-collapse {
+
+                & .nav-principal {
+
+                    & .nav-item {
+                        margin: 0 2rem;
+                        
+                        & a {
+                            @include nav-op-st;
+                            margin: 0 2rem;
+        
+                            &:hover {
+                                @include hover-nav-st;
+                            }
+                        }
+
+                        & .select__pfm--st {
+                            @include nav-op-st;
+                            margin: .2rem 1rem;
+                            background-color: #6D6D6D;
+                            border: none;
+
+                            &:focus {
+                                border-color: #6D6D6D;
+                                outline: 0;
+                                box-shadow: none;
+                            }
+        
+                            &:hover {
+                                @include hover-nav-st;
+                            }
+                        }
+                    }
+                }
+    
+                & .formulario-search {
+                    height: 3.5rem;
+
+                    & .buscar{
+                        font-size: 1.5rem;
+                    }
+                
+                    & .btn-st {
+                        margin-left: 1rem;
+                        width: 15rem;
+                        background-color: $white;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                        border: solid black;
+                        color: $black;
+                
+                        &:hover{
+                            cursor: pointer;
+                            background-color: aqua;
+                        }
+                    }
+                }
+
+                & .nav-icon {
+
+                    & .nav-icon__img {
+
+                        & .nav-icon__img-sty {
+                            margin-left: 5rem;
+                            width: 4.5rem;
+                            height: 4.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

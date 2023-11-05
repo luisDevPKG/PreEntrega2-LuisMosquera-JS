@@ -1,0 +1,89 @@
+.exclusivos {
+    margin: 0 auto;
+    width: 90%;
+
+    & .exclusivo__consola--st {
+        padding: 4rem 0;
+        font-weight: bold;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    & .grid-container {
+        @include grid-plataforma;
+
+        & .card-container {
+            @include card-con-plataforma;
+
+            & .img--card {
+                @include img-card-plataforma;
+            }
+
+            & .card-info {
+                margin: 0 3rem;
+
+                & .texto {
+
+                    & .card__title--st {
+                        font-weight: bold;
+                        font-size: 2.5rem;
+                    }
+
+                    & .card__text--st {
+                        margin-top: 1rem;
+                        text-align: justify;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                & .comentarios {
+                    
+                    & .comentario-info {
+                        /* comentarios card */
+                        display: flex;
+                        align-items: center;
+                        padding: 1rem;
+
+                        & .icon__user--dm {
+                            width: 5rem;
+                        }
+
+                        & .text__user--st {
+                            margin-left: 1.2rem;
+                            text-align: justify;
+                            font-size: 1.1rem;
+
+                            & span {
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                & .enlaces {
+                    /* enlaces card */
+                    text-align: center;
+                    font-size: 1.4rem;
+                    padding-bottom: 2rem;
+
+                    & .card_link--opt {
+                        margin: 0 1.3rem;
+                        text-decoration: none;
+                        color: #1264FF;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        & .juego-trailer {
+            /* Frame juego */
+            padding: 1rem 0 1rem 1rem;
+
+            & iframe {
+                width: 50vw;
+                height: 70rem;
+            }
+        }
+    }
+}

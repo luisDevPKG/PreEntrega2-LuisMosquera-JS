@@ -1,0 +1,153 @@
+.game-info {
+    margin: 0 auto;
+    width: 90%;
+
+    & .grid-container-pago {
+        @include grid-pago;
+
+        & .card-container-pago {
+            @include card-juego-pago;
+
+            & .img--juego {
+                    @include img-juego;
+            }
+
+            & .card-info {
+                margin: 0 3rem;
+
+                & .texto {
+
+                    & .card__title--st {
+                        font-weight: bold;
+                        font-size: 2.5rem;
+                    }
+
+                    & .card__text--st {
+                        margin-top: 1rem;
+                        text-align: justify;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                & .informacion-juego {
+                    
+                    & .caracteristicas {
+                        /* caracteristicas del juego */
+                        padding-bottom: 1rem;
+
+                        & .text__caracteristica--st {
+                            margin-left: 1.2rem;
+                            text-align: justify;
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    & .plataforma-info {
+                        margin-top: 1rem;
+                        display: flex;
+
+                        & .text__plataforma--st {
+                            margin-left: 1.2rem;
+                            font-size: 1.1rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            padding: .3rem;
+
+                            &:hover {
+                                background-color: #DBDADA;
+                            }
+                        }
+                    }
+                }
+
+                & .precio {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 2rem;
+
+                    & .precio--descuento {
+                        @include precio-juego-sty;
+
+                        & .precio__descuento--st {
+                            @include desc-precio-game-style;
+                        }
+
+                        & .porcentaje__descuento--st {
+                            @include desc-porcentaje-game-style;
+                        }
+
+                    }
+
+                    & .precio--juego {
+                        @include precio-juego-sty;
+
+                        & .precio__juego--st {
+                            @include precio-real-game-style;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .card-container-form-pago {
+            @include card-form-pago;
+            width: 80%;
+            height: 42rem;
+
+            & .texto {
+
+                & .card__title--st {
+                    font-size: 2rem;
+                    margin-left: 2rem;
+                }
+            }
+
+            & .tipo-cuenta {
+                margin: 2rem 0;
+
+                & .form-check {
+
+                    & .check-in-wh {
+                        @include btnck-form-pago-style;
+                    }
+                    & .check-lb {
+                        margin-top: .5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            & .metodos-pago {
+                display: flex;
+                justify-content: center;
+                margin-top: 3rem;
+
+                & .metodo__pago--st {
+                    height: 5rem;
+                    width: 6rem;
+                    margin: 0 1rem;
+                }
+            }
+
+            & .btn-container {
+                margin-top: 2rem;
+
+                & .btn__pago--sty {
+                    display: block;
+                    margin: 0 auto;
+                    width: 25rem;
+                    height: 5rem;
+                    margin-top: 1.5rem;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    padding: .5rem 0;
+
+                    & .btn__img-sty {
+                        width: 8%;
+                        margin: 0 .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/* --- Vista Tablets --- */
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        & .contenedor {
+
+            & .container-fluid {
+    
+                & .navbar-collapse {
+    
+                    & .formulario-search {
+        
+                        & .buscar {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ofertas h2 {
+        font-size: 3.3rem;
+    }
+    .ofertas .promociones {
+
+        & .boton-slider {
+            left: 40%;
+            bottom: 2.5%;
+        }
+    }
+    /* -- Plataformas -- */
+    .exclusivos {
+        width: 100%;
+    }
+    /* -- Contactanos -- */
+    .formulario {
+
+        & h3 {
+            text-align: justify;
+        }
+    }
+}

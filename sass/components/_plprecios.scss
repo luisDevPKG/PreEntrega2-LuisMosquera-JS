@@ -1,0 +1,78 @@
+.planes h2 {
+    margin: 7rem 0 3rem 0;
+    @include plan-precios-titulo;
+}
+.planes .planes-info {
+    @include plan-precios-gri;
+
+    & .card {
+        /* Card estilo */
+        @include plan-precios-card;
+    }
+    & .un-anio-ps {
+         grid-column: 2 / 3;
+    }
+    & .tres-meses-ps {
+         grid-column: 3 / 4;
+    }
+    & .un-mes-ps {
+         grid-column: 4 / 5;
+    }
+
+    & .ps-plus-img {
+        width: 100% ;
+        height: 80%;
+        padding: unset;
+    }
+
+    &  .card .card-info {
+        /* Estilos CARDS en general (PS y XBOX) */
+        text-align: center;
+
+        & .titulo-promo {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        & .card-descripcion {
+            font-size: 1.4rem;
+            text-align: justify;
+            padding: .5rem 0;
+        }
+
+        & .btn-comprar-ps {
+            /* Boton comprar PS */
+            @include btn-ps;
+        }
+
+        & .btn-comprar-xbox {
+            /* Boton compar xbox */
+            @include btn-xbx;
+        }
+    }
+
+    & .game-pass-img {
+        /* XBOX GAME PASS */
+        width: 100% ;
+        height: 80%;
+        padding: unset;
+    }
+    & .un-anio-xbox {
+        grid-column: 2 / 3;
+    }
+    & .tres-meses-xbox {
+        grid-column: 3 / 4;
+    }
+    & .un-mes-xbox {
+        grid-column: 4 / 5;
+    }
+
+    & .animacion-card {
+        /* Animacion cards - Planes */
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-15px);
+        }
+    }
+}

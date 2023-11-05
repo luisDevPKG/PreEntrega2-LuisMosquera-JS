@@ -1,0 +1,197 @@
+/* --- Vista mobile horizontal-- */
+@media screen and (max-width: 740px) {
+    header {
+        flex-direction: column;
+    }
+    .logo img {
+        margin: 2rem 0;
+    }
+    .titulo {
+
+        & .contenido-titulo h1 {
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+    }
+    /* Boton hamburguesa seccion formulario buscar */
+    .nav-bar {
+
+        & .contenedor {
+
+            & .container-fluid {
+                
+                & .navbar-collapse {
+
+                    & .formulario-search {
+                        justify-content: space-evenly;
+                        width: 95%;
+                
+                        & .buscar {
+                            width: 70%;
+                        }
+                
+                        & .btn-st {
+                            margin-left: unset;
+                            width: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Ofertas */
+    .ofertas h2 {
+        font-size: 3.5rem;
+    }
+    .ofertas .promociones {
+        width: 95%;
+        height: 72rem;
+
+        & .informacion {
+            margin: 0 2rem;
+    
+            & .info-descripcion {
+                font-size: 2rem;
+            }
+    
+            & .star-rating {
+                margin-bottom: 2rem;
+    
+                & span {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        @each $bgjuego, $imgbg in $imgbg-juegos {
+            #contenedor-#{$bgjuego} {
+                /* estilo contenedor juego - slider */
+                @include contendores-juegos-mv;
+            }
+        }
+
+        @each $juego, $img in $img-juego {
+            #contenedor-#{$juego} .img-juego {
+                /* Dimensiones de las imagenes del juego en el Slider */
+                width: 75%;
+                height: 35rem;
+                margin: 3rem 0;
+            }
+        }
+
+        & .boton-slider {
+            bottom: 1.5%;
+        }
+    }
+    /* Planes y precios */
+    .planes h2 {
+        margin: 5rem 0 3rem 0;
+    }
+    .planes .planes-info {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem;
+
+        & .card {
+            width: 40rem;
+            height: 36rem;
+
+            & .card-info {
+
+                & .card-descripcion {
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+    }
+    /* Footer */
+    .redes h3 {
+        width: 50%;
+    }
+    .copyrigth {
+        margin-top: 1rem;
+    }
+    /* Pago */
+    .game-info {
+
+        & .grid-container-pago {
+
+            & .card-container-form-pago {
+                width: 80%;
+            }
+        }
+    }
+    /* -- Quienes Somos -- */
+    .container-principal {
+
+        & .container__titulo {
+
+            & .titulo--st {
+                font-size: 3.8rem;
+            }
+        }
+
+        & .contacto-info {
+            /* Informacion contacto */
+            margin-bottom: 3rem;
+            display: unset;
+
+            & .content__info {
+                margin-bottom: 4rem;
+            }
+        }
+
+        & .ubicacion-info {
+            & .ub__map {
+
+                & .iframe--stl {
+                    /* Iframe */
+                    width: 34rem;
+                }
+            }
+        }
+
+    }
+    /* -- Contactanos -- */
+    .formulario {
+
+        & h2 {
+            padding: 0 1rem;
+        }
+
+        & h3 {
+            padding: 0 3rem;
+        }
+
+        & .formulario-informacion {
+            width: 90%;
+            padding: 4rem 3rem 4rem 3rem;
+
+            & .fieldset-container {
+
+                & legend {
+                    margin-right: unset;
+                }
+
+                & .check-w {
+                    width: 31%;
+                    margin-left: 2rem;
+                }
+                
+                & .form-check {
+
+                    & .check-in-wh {
+                        margin-right: unset;
+                    }
+                }
+            }
+
+            & .btn-container {
+
+                & .btn-form {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}

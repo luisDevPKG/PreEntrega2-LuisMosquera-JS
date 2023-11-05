@@ -1,0 +1,79 @@
+.formulario {
+
+    & h2 {
+        @include contact-titulo;
+    }
+
+    & h3 {
+        @include contact-sub;
+    }
+
+    & .formulario-informacion {
+        @include contact-form-style;
+
+        & .row {
+
+            & label {
+                font-size: 2rem;
+            }
+
+            & .form-input {
+
+                & .input-data {
+                    padding: .5rem;
+                    font-size: 1.7rem;
+
+                    &::placeholder {
+                        opacity: 40%;
+                    }
+                }
+            }
+        }
+
+        & .fieldset-container {
+            margin-top: 3rem;
+
+            & legend {
+                font-size: 2rem;
+                margin-right: 3rem;
+            }
+
+            & .form-check {
+
+                & .check-in-wh {
+                    @include btnck-contact-form-style;
+                }
+            }
+        }
+
+        & .textarea-container {
+
+            & .textarea-label {
+                /* Text area formulario */
+                margin: 2rem 0 1rem 0;
+                font-size: 2rem;
+            }
+
+            & .textarea-content {
+                height: 15rem;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        & .btn-container {
+            display: flex;
+            justify-content: center;
+
+            & .btn-form {
+                @include btn_enviar_contact_form-style;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: aqua;
+                    color: black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+/* --- Vista mobile -- */
+@media screen and (max-width: 480px) {
+
+    .nav-bar {
+
+        & .contenedor {
+
+            & .container-fluid {
+
+                & .navbar-collapse {
+                    & .formulario-search {
+                        width: 94%;
+                
+                        & .buscar {
+                            // width: 20rem;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Ofertas */
+    .ofertas .promociones {
+        height: 84rem;
+
+        @each $juego, $img in $img-juego {
+            #contenedor-#{$juego} .img-juego {
+                /* Dimensiones de las imagenes del juego en el Slider */
+                width: 32rem;
+            }
+        }
+
+        & .boton-slider {
+            left: 33vw;
+        }
+    }
+    /* Plataformas */
+    .exclusivos {
+        width: 100%;
+
+        & .container__plataforma {
+
+            & .card-container {
+                    
+                & .card__container--st {
+                    width: 95%;
+                }
+            }
+        }
+    }
+    /* Pago */
+    .game-info {
+
+        & .grid-container-pago {
+
+            & .card-container-pago {
+                
+                & .img--juego {
+                    width: 90%;
+                }
+            }
+
+            & .card-container-form-pago {
+                width: 90%;
+            }
+        }
+    }
+    /* Planes y precios */
+    .planes .planes-info {
+        
+        & .card {
+            width: 31rem;
+        }
+    }
+}

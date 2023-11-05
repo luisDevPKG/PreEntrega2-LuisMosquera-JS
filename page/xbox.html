@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metas SEO -->
+    <meta name="description" content="Video juegos explusivos en las plataformas Xbox">
+    <meta name="keywords" content="Plataformas, Video juegos, Video games, Exclusivos, Xbox">
+    <!-- Aqui termina las metas para el SEO-->
+    <link rel="shortcut icon" href="../assets/logo-game-over.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Agregando Normalice css para setear -->
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- para mayor performance -->
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Agregando animacion a las cards -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Agregando bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Game Over | Press Start... - Xbox</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/logo-game-over.png" alt="Logo pagina Game Over">
+        </div>
+        <div class="titulo">
+            <div class="contenido-titulo">
+                <h1>La aventura comienza aqui, que esperas por descubrirla</h1>
+            </div>
+        </div>
+    </header>
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg contenedor">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-principal">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <select class="form-select select__pfm--st" id="plataformas" aria-label="Plataformas">
+                        <option disabled >Plataformas</option>
+                        <option value="./playstation.html">PlayStation</option>
+                        <option selected value="./xbox.html">Xbox</option>
+                    </select>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html#suscripcion">Suscribete</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./quienes_somos.html">Quienes somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./contactanos.html">Contactanos</a>
+                  </li>
+                </ul>
+                <div class="d-flex formulario-search" role="search">
+                  <input class="form-control me-2 buscar" type="text" placeholder="Buscar" aria-label="Search" id="buscar">
+                  <button class="btn-st" id="btn-buscar">Buscar</button>
+                </div>
+                <div class="nav-icon">
+                    <a href="" class="nav-icon__img">
+                        <img class="nav-icon__img-sty" src="../assets/icons/cart.png" alt="icon carrito compras">
+                    </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <main class="main">
+        <section class="exclusivos">
+            <h2 class="exclusivo__consola--st">Exclusivos Xbox</h2>
+            <!-- card juegos xbox -->
+            <div class="container container__plataforma">
+                <div class="card-container" id="card-template" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- se generar las cards -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="redes">
+            <h3>Siguenos</h3>
+            <div class="redes-icon">
+                <a href="#"><img src="../assets/icons/instagram.png" alt="logo instagram"></a>
+                <a href="#"><img src="../assets/icons/facebook.png" alt="logo facebook"></a>
+                <a href="#"><img src="../assets/icons/tiktok.png" alt="logo tiktok"></a>
+            </div>
+        </div>
+        <div class="copyrigth">
+            <p class="copyrigth-info">Proyecto practica HTML y CSS - Todos los derechos reservados.  Luis Fernando Mosquera</p>
+        </div>
+    </footer>
+    <!-- Redirige a la Plataforma deseada -->
+    <script src="../javascript/redirigirPlataformas.js"></script>
+    <!-- Buscar Productos-->
+    <script src="../javascript/Plataforma.js"></script>
+    <!-- Complemento Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Complemento animacion -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Iniciando AOS para la animacion -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

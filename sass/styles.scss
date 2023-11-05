@@ -1,0 +1,31 @@
+/* abstracts */
+@import './abstract/variables';
+
+/* base */
+@import './base/resets';
+@import './base/base';
+/* Header */
+@import './layout/header';
+/* Navbar */
+@import './layout/navbar';
+/* Ofertas */
+@import './components/ofertas';
+/* Planes y precios */
+@import './components/plprecios';
+/* Footer */
+@import './layout/footer';
+/* Plataformas */
+@import './components/plataformascards';
+/* Pago */
+@import './components/pago';
+/* Quienes somos */
+@import './layout/quienessomos';
+/* Contactanos */
+@import './components/contactanos';
+
+/* Media queries */
+@import './base/mqpextra';
+@import './base/mqtbgrande';
+@import './base/mqtb';
+@import './base/mqmvh';
+@import './base/mqmv';

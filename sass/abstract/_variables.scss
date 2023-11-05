@@ -1,0 +1,280 @@
+/* Defino la paleta de colores de la pagina */
+$black: #000000;
+$white: #ffffff;
+$background: #F3F3F3;
+
+/* Estilos opciones nav */
+@mixin nav-op-st {
+    color: $white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+/* Hover opciones nav */
+@mixin hover-nav-st {
+    color: aqua;
+    background-color: #464646;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+/* Imagenes background - seccion ofertas */
+$imgbg-juegos: (
+    juego-1: url(../assets/ofertas/background-1.png),
+    juego-2: url(../assets/ofertas/background-2.png),
+    juego-3: url(../assets/ofertas/background-3.png)
+);
+
+/* Imagen del juego - seccion ofertas */
+$img-juego: (
+    juego-1: url(../assets/ofertas/elden-ring-game.webp),
+    juego-2: url(../assets/ofertas/horizon-zero-dawn.jpeg),
+    juego-3: url(../assets/ofertas/dead-space-game.webp)
+);
+/* Contenedores juegos slider */
+$contenedor: juego-1, juego-2, juego-3;
+
+/* display cards slider vista standar*/
+@mixin contendores-juegos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    animation: slider 15s ease-in-out infinite;
+}
+
+/* display cards slider vista mobile*/
+@mixin contendores-juegos-mv {
+    flex-direction: column;
+    background-position: center;
+    justify-content: unset;
+}
+
+/* Cards Planes y precios*/
+@mixin plan-precios-titulo {
+    font-size: 3rem;
+    color: $black;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+@mixin plan-precios-gri {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+@mixin plan-precios-card {
+    border: none;
+    align-items: center;
+    border-radius: 5% 5% 0 0;
+    box-shadow: .6rem .6rem .5rem .4rem rgba(0,0,0,0.57);
+    margin-bottom: 5rem;
+}
+@mixin btn-ps {
+    padding: 1rem 3rem;
+    background-color: #2356B6;
+    border: solid #2356B6;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+@mixin btn-xbx{
+    padding: 1rem 3rem;
+    background-color: #0A9220;
+    border: solid #0A9220;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* Mixin footer*/
+@mixin footer-titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+@mixin foot-copyrigth-info {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $white;
+}
+/* logo - quienes somos */
+@mixin logo-qsomos {
+    background-color: $black;
+    margin: 2rem 0 2rem 3rem;
+    padding: 3rem;
+    border-radius: 20px;
+    height: unset;
+}
+/* titulo mision vision - quienes somos */
+@mixin mv-style {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* estilo texto mision vision - quienes somos */
+@mixin mv-txt-style {
+    text-align: justify;
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+/* estilo iconos tel y email - quienes somos */
+@mixin qsomos-icon-style {
+    width: 7rem;
+    height: 7rem;
+    margin: 1.5rem 0;
+    padding: unset;
+}
+/* Iframe ubicacion - quienes somos */
+@mixin qsomos-iframe-style {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+/* titulo contactanos */
+@mixin contact-titulo {
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+/* Subtitulo - contactanos */
+@mixin contact-sub {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: unset;
+}
+/* Estilo Formulario - contactanos */
+@mixin contact-form-style {
+    width: 53%;
+    margin: 0 auto;
+    border: solid black;
+    padding: 4rem 4rem 4rem 4rem;
+    margin-bottom: 5rem;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+    background-color: #FAFAFA;
+}
+/* Radio buttons formulario - contactanos*/
+@mixin btnck-contact-form-style {
+    margin-top: .5rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+/* Boton enviar formulario - contactanos*/
+@mixin btn_enviar_contact_form-style {
+    width: 15%;
+    height: 5rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    background-color: #6D6D6D;
+    border: solid black;
+    color: $white;
+}
+/* Contenedor Card - Plataformas */
+@mixin card-con-plataforma {
+    width: 90%;
+    border: solid black;
+    border-radius: 1.5rem;
+    background-color: #eaeaea;
+    box-shadow: 10px 10px 8px -7px rgba(0,0,0,0.75);
+    margin-bottom: 6rem;
+}
+/* Imagenes Card - Plataformas */
+@mixin img-card-plataforma {
+    margin: 0 auto;
+    width: 100%;
+    height: 40rem;
+    padding: 3rem;
+    border-radius: 4rem;
+}
+/* Estilo boton comprar - plataformas */
+@mixin btn-comprar {
+    padding: .5rem 3rem;
+    background-color: green;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $white;
+    border-radius: .5rem;
+    border: solid green;
+}
+/* Grilla Pagos */
+@mixin grid-pago {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+/* Contenedor Card Juego - Pago */
+@mixin card-juego-pago {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+/* Imagen Card - Pago */
+@mixin img-juego {
+    width: 50%;
+    padding: 3rem;
+    border-radius: 4rem;
+}
+/* Contenedor Card Formulario de Pago */
+@mixin card-form-pago {
+    display: flex;
+    flex-direction: column;
+    border: 0.2rem solid gray;
+    border-radius: 1.5rem;
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    background-color: #E9E9E9;
+    padding: 1rem;
+}
+/* Radio buttons formulario - Pago*/
+@mixin btnck-form-pago-style {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+/* Estilo Flex precio juego - Formulario Pago*/
+@mixin precio-juego-sty {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+/* Estilo del precio descuento al juego - Formulario Pago*/
+@mixin desc-precio-game-style {
+    margin-right: 2rem;
+    color: red;
+    font-size: 2rem;
+    text-decoration:line-through;
+}
+/* Estilo del porcentaje descuento al juego - Formulario Pago*/
+@mixin desc-porcentaje-game-style {
+    margin-right: 2rem;
+    background-color: red;
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+/* Estilo del precio con descuento al juego - Formulario Pago*/
+@mixin precio-real-game-style {
+    background-color:#73C846;
+    color: $white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0 1rem;
+}

@@ -1,0 +1,99 @@
+/* -- Seccion OFERTAS -- */
+.ofertas h2 {
+    margin: 4rem 0;
+    font-size: 4rem;
+    font-family:monospace;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.ofertas {
+    position: relative;
+}
+.ofertas .promociones {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    margin: 0 auto;
+    background-color: #F4FFFE;
+    border-radius: 1rem;
+    box-shadow: .5rem 0rem 2.5rem rgba(0, 0, 0, .6);
+    overflow: hidden;
+    width: 70%;
+    height: 55rem;
+    
+    @each $bgjuego, $imgbg in $imgbg-juegos {
+        #contenedor-#{$bgjuego} {
+            /* Dimensiones de la imagen de background en el Slider */
+            background-image: $imgbg;
+            background-size: cover;
+            /* estilo contenedor juego - slider */
+            @include contendores-juegos;
+        }
+    }
+
+    @each $juego, $img in $img-juego {
+        #contenedor-#{$juego} .img-juego {
+            /* Dimensiones de las imagenes del juego en el Slider */
+            width: 340rem;
+            height: 40rem;
+            background-image: $img;
+            background-size: cover;
+            background-position: center;
+            margin: 3rem;
+            border-radius: 2rem;
+        }
+    }
+
+    & .informacion {
+        margin: 0 3rem 0 0;
+        text-align: justify;
+
+        & .info-descripcion {
+            /* Informacion de cada juego - slider */
+            font-size: 1.8rem;
+
+            & b {
+                font-family: 'Bree Serif', serif;
+                font-size: 3.5rem;
+                text-transform: uppercase;
+            }
+        }
+        & .star-rating {
+            /* Ofertas - Calificacion */
+            display: inline-block;
+
+            & span {
+                font-size: 3rem;
+                color: $black;
+            }
+        }
+    }
+    
+    & .boton-slider {
+        position: absolute;
+        left: 46.5%;
+        bottom: 3%;
+
+        & .boton {
+            display: inline-block;
+            margin: 0 2rem;
+            background-color: $black;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 1.2rem;
+
+            &:hover {
+                box-shadow: 0rem, 0rem, .7rem, rgba(0, 0, 0, .6);
+            }
+        }
+    }
+}
+@keyframes slider {
+    0%{transform: translateX(0%);}
+    20%{transform: translateX(0%);}
+    30%{transform: translateX(-100%);}
+    50%{transform: translateX(-100%);}
+    60%{transform: translateX(-200%);}
+    80%{transform: translateX(-200%);}
+    100%{transform: translateX(0%);}
+}
