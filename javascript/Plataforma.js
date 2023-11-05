@@ -250,6 +250,7 @@ class Plataforma {
         // limpio el contenido de la tarjeta
         this.card.innerHTML = '';
         
+        // Valido el tamaño del array juegoFiltrado para mostar mensansaje en caso de que al buscar no exista el juego
         if (juegoFiltrado.length == 0 ){
             this.card.innerHTML += `
             <div class="card card__container--st">
