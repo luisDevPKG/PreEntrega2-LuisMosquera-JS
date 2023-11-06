@@ -240,7 +240,6 @@ class Plataforma {
 
         // Obtengo los juegos según la plataforma
         const juegosInfo = plataforma === "PlayStation" ? this.videoJuegosPlayStation : this.videoJuegosXbox;
-        console.log(juegosInfo)
 
         // Filtro los juegos que coincidan con la busqueda
         const juegoFiltrado = juegosInfo.filter((juego) => {
