@@ -1,4 +1,7 @@
 const opcionSelect = document.querySelector("select.form-select#plataformas");
+//const nombreJuego = document.querySelector("h5.card__title--st#nombreJuego");
+//const btnComprar = document.querySelectorAll("button.btn__comprar--st#comprar");
+
 
 // agrego un evento de cambio dependiendo de la opcion marcada en el select
 opcionSelect.addEventListener("change", ()=> {
@@ -43,3 +46,25 @@ function buscar(plataforma) {
 
     plataforma.mostrarJuegosFiltrados(juegoFiltrado);
 }
+
+/*
+// almacena en el localStore la informacion del juego que se hace clic en comprar
+function guardarJuegoComprado(){
+
+    // obtengo los valores del formulario y lo almaceno en el objeto dataJuego
+    const dataJuego = {
+        fecha: new Date(),
+        //id: plataforma.mostrarJuegos(),
+        titulo: nombreJuego.value
+    }
+
+    localStorage.setItem("dataJuego", JSON.stringify(dataJuego))
+}
+/*
+
+/*
+// btnComprar.addEventListener("click", ()=> guardarJuegoComprado())
+btnComprar.forEach((button) => {
+    button.addEventListener('click', () => console.log("compradoo"));
+});
+*/

@@ -20,11 +20,11 @@ class Plataforma {
         return `<div class="card card__container--st">
                     <img src="${videojuego.img}" class="img--card" alt="${videojuego.titulo} juego">
                     <div class="card-body texto">
-                        <h5 class="card__title--st">${videojuego.titulo}</h5>
+                        <h5 class="card__title--st" id="${videojuego.titulo}">${videojuego.titulo}</h5>
                         <p class="card__text--st">${videojuego.descripcion}</p>
                     </div>
                     <div class="card-body btn__comprar">
-                        <button class="btn__comprar--st" onclick="redirigePago(${videojuego.id})">Comprar</button>
+                        <button class="btn__comprar--st" id="${videojuego.id}">Comprar</button>
                     </div>
                 </div>`;
     }
@@ -33,15 +33,20 @@ class Plataforma {
     cardNoFound(){
         return `<div class="card card__container--st" style="grid-column: 2/3">
                     <h2 class="exclusivo__consola--st">No se encontraron resultados</h2>
+                    <img src="../assets/icons/no-results.png" alt="logo no found" style="
+                    width: 10rem;
+                    margin: 0 auto;
+                    padding-bottom: 2rem;
+                    ">
                 </div>`;
     }
 
     // establece un tooltip en los botones de cada card
     infoTooltip(){
-        const btnVerInfo = document.querySelectorAll("button.btn__comprar--st")
+        const btnVerInfo = document.querySelectorAll("button.btn__comprar--st#comprar")
         btnVerInfo.forEach(boton => {
             boton.addEventListener("mouseover", ()=> {
-                boton.title = "Click aqui para agregar al carrito"
+                boton.title = "Click aqui para comprar"
             })
         })
     }
@@ -54,7 +59,9 @@ class Plataforma {
             // mapeo la informacion del array
             this.playstationGames.map((videojuego)=> {
             // por cada objeto del array se crea una card
-            this.card.innerHTML += this.cardVideoJuego(videojuego)})
+            this.card.innerHTML += this.cardVideoJuego(videojuego);
+            //return videojuego.id;
+        })
 
             // tooltip para el boton ver informacion de las cards
             this.infoTooltip()
@@ -71,7 +78,9 @@ class Plataforma {
             // mapeo la informacion del array
             this.xboxGames.map((videojuego)=> {
             // por cada objeto del array se crea una card
-            this.card.innerHTML += this.cardVideoJuego(videojuego)})
+            this.card.innerHTML += this.cardVideoJuego(videojuego)
+            //return videojuego.id;
+        })
 
             // tooltip para el boton ver informacion de las cards
             this.infoTooltip()
@@ -93,6 +102,33 @@ class Plataforma {
             this.card.innerHTML += this.cardVideoJuego(juego)})
         }
     }
+
+    // almacena en el local storage el juego al cual se hace clic en comprar
+    // recibe como parametro boton, para indicar el elemento especifico relacionado con el boton comprar presionado
+    guardarJuegoComprado(boton){
+
+        /*
+
+        Con el metodo closests obtengo el elemento padre más cercano del botón comprar que tiene la clase "card"
+        Esto me permite que al momento de hacer clic en comprar, me llame la informacion de la card donde
+        se presionó el botón.
+
+        */
+        const nombreJuego = boton.closest(".card").querySelector("h5.card__title--st");
+        let nombre = nombreJuego.id
+
+        const btnComprar = boton.closest(".card").querySelector("button.btn__comprar--st");
+        let idJuego = btnComprar.id
+
+        // obtengo los valores del formulario y lo almaceno en el objeto dataJuego
+        const dataJuego = {
+            fecha: new Date(),
+            id: idJuego,
+            titulo: nombre
+        }
+        localStorage.setItem("dataJuego", JSON.stringify(dataJuego))
+    }
+
 }
 
 // Creo una instancia de Plataformas
@@ -105,4 +141,9 @@ const btnBuscar = document.querySelector("button.btn-st#btn-buscar");
 // Agrego un controlador de eventos para el botón de búsqueda
 btnBuscar.addEventListener("click", () => {
     buscar(plataforma);
+})
+
+const btnComprar = document.querySelectorAll("button.btn__comprar--st");
+btnComprar.forEach((button) => {
+    button.addEventListener('click', () => plataforma.guardarJuegoComprado(button));
 })
