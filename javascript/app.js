@@ -46,25 +46,3 @@ function buscar(plataforma) {
 
     plataforma.mostrarJuegosFiltrados(juegoFiltrado);
 }
-
-/*
-// almacena en el localStore la informacion del juego que se hace clic en comprar
-function guardarJuegoComprado(){
-
-    // obtengo los valores del formulario y lo almaceno en el objeto dataJuego
-    const dataJuego = {
-        fecha: new Date(),
-        //id: plataforma.mostrarJuegos(),
-        titulo: nombreJuego.value
-    }
-
-    localStorage.setItem("dataJuego", JSON.stringify(dataJuego))
-}
-/*
-
-/*
-// btnComprar.addEventListener("click", ()=> guardarJuegoComprado())
-btnComprar.forEach((button) => {
-    button.addEventListener('click', () => console.log("compradoo"));
-});
-*/
