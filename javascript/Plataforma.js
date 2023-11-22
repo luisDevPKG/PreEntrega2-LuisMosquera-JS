@@ -43,7 +43,7 @@ class Plataforma {
 
     // establece un tooltip en los botones de cada card
     infoTooltip(){
-        const btnVerInfo = document.querySelectorAll("button.btn__comprar--st#comprar")
+        const btnVerInfo = document.querySelectorAll("button.btn__comprar--st")
         btnVerInfo.forEach(boton => {
             boton.addEventListener("mouseover", ()=> {
                 boton.title = "Click aqui para comprar"
